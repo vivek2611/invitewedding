@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>शादी का निमंत्रण | हिमांशु & श्वेता</title>
+
+  <!-- SEO & Social Open Graph for WhatsApp sharing -->
+  <meta name="description"
+    content="आपको हिमांशु एवं श्वेता के विवाह समारोह में 24 एवं 25 नवंबर 2026 को सादर आमंत्रित किया जाता है।">
+  <meta property="og:title" content="शादी का निमंत्रण | हिमांशु & श्वेता ❤️">
+  <meta property="og:description"
+    content="24-25 नवंबर 2026 • संगीत, हल्दी एवं शादी समारोह। निमंत्रण देखने के लिए टैप करें!">
+  <meta property="og:image" content="assets/hero_couple.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Royal Calligraphy and Classical Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Rozha+One&family=Yatra+One&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <!-- Background Petals Canvas (Subtle & Sparse) -->
+  <canvas id="petals-canvas"></canvas>
+
+  <!-- Background Music Control Floating Button -->
+  <div class="music-controller" id="music-controller" title="Play / Mute Wedding Music">
+    <div class="music-disc" id="music-disc">
+      <span class="music-icon">🎵</span>
+      <div class="music-wave" id="music-wave">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+    <span class="music-label" id="music-label">शादी की धुन</span>
+  </div>
+
+  <!-- ROYAL ENVELOPE / WAX SEAL OPENING OVERLAY -->
+  <div class="envelope-overlay" id="envelope-overlay">
+    <div class="envelope-container" id="envelope-container">
+      <div class="envelope-card-preview">
+        <div class="envelope-header-text">शुभ विवाह</div>
+        <div class="envelope-couple-names">हिमांशु & श्वेता</div>
+        <div class="envelope-dates">24 • 25 नवंबर 2026</div>
+      </div>
+
+      <div class="wax-seal-button" id="wax-seal-btn" role="button" aria-label="निमंत्रण खोलें">
+        <div class="wax-seal-ring">
+          <div class="wax-seal-inner">
+            <span class="seal-icon">ॐ</span>
+            <span class="seal-text">निमंत्रण खोलें</span>
+          </div>
+        </div>
+        <div class="wax-seal-shine"></div>
+      </div>
+      <p class="seal-prompt">निमंत्रण खोलने के लिए शाही मुहर पर टैप करें</p>
+    </div>
+  </div>
+
+  <!-- FLOATING HANGING LANTERNS HEADER WITH CENTERED AUSPICIOUS SHLOKA -->
+  <header class="top-lantern-header">
+    <div class="garland-container">
+      <img src="assets/floral_header.jpg" alt="फूलों की माला और लटकती लालटेन" class="top-garland-img">
+
+      <!-- 4 Animated Hanging Lantern Glow Overlays exactly on the 4 painted lanterns -->
+      <div class="lantern lantern-1">
+        <div class="lantern-glow"></div>
+      </div>
+      <div class="lantern lantern-2">
+        <div class="lantern-glow"></div>
+      </div>
+      <div class="lantern lantern-3">
+        <div class="lantern-glow"></div>
+      </div>
+      <div class="lantern lantern-4">
+        <div class="lantern-glow"></div>
+      </div>
+
+      <!-- Auspicious Shloka Centered in the Royal Arch Opening (Bigger & Prominent) -->
+      <div class="auspicious-shloka-center">
+        <div class="shloka-symbol">॥ श्री गणेशाय नमः ॥</div>
+        <p class="shloka-text">
+          वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br>
+          निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥
+        </p>
+        <div class="gold-filigree-divider small"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN INVITATION PAGE CONTAINER: EXPANDS FULL-WIDTH ON DESKTOP, FOCUSED CARD ON MOBILE -->
+  <main class="invitation-wrapper" id="invitation-wrapper">
+
+    <!-- STACKING / OVERLAPPING CARDS FOLD-UP WRAPPER -->
+    <div class="cards-stack-container" id="cards-stack-container">
+
+      <!-- STACK CARD 1: HERO INVITATION CARD (Exact Match to Left Card + Countdown) -->
+      <section class="stack-section hero-card-section" id="hero-section" data-card-index="0">
+        <div class="card-outer-frame">
+          <div class="card-inner-frame hero-layout-split">
+            <div class="card-corner-ornament top-left"></div>
+            <div class="card-corner-ornament top-right"></div>
+            <div class="card-corner-ornament bottom-left"></div>
+            <div class="card-corner-ornament bottom-right"></div>
+
+            <!-- Left / Media Column on Desktop -->
+            <div class="hero-media-col">
+              <div class="hero-illustration-frame">
+                <div class="illustration-border-glow"></div>
+                <img src="assets/hero_couple.jpg" alt="हिमांशु और श्वेता विवाह चित्र"
+                  class="hero-couple-img">
+                <div class="illustration-caption">दो आत्माएं, एक पवित्र यात्रा</div>
+              </div>
+            </div>
+
+            <!-- Right / Details Column on Desktop -->
+            <div class="hero-content-col">
+              <div class="invite-header-label">
+                आपको शादी में सादर आमंत्रित किया जाता है
+              </div>
+
+              <!-- Couple Names in Luxury Script Font -->
+              <h1 class="couple-names-display">
+                श्वेता <span class="ampersand">&</span> हिमांशु
+              </h1>
+
+              <!-- Date Highlight -->
+              <div class="hero-date-banner">
+                24 एवं 25 नवंबर, 2026
+              </div>
+
+              <div class="family-invitation-message">
+                <p class="intro-blessing">
+                  दोनों परिवारों की ओर से आपको इस पवित्र बंधन, आशीर्वाद और उत्सव में
+                  सम्मिलित होने के लिए सादर आमंत्रित किया जाता है।
+                </p>
+              </div>
+
+              <!-- Embedded Countdown Timer Inside Hero Card -->
+              <div class="hero-countdown-embed">
+                <div class="countdown-title-wrapper">
+                  <span class="clock-icon">⏳</span>
+                  <span class="countdown-heading">उत्सव की उलटी गिनती</span>
+                </div>
+                <div class="countdown-grid" id="countdown-timer">
+                  <div class="timer-unit">
+                    <div class="unit-box"><span class="unit-number" id="days-val">--</span></div>
+                    <span class="unit-label">दिन</span>
+                  </div>
+                  <div class="timer-separator">:</div>
+                  <div class="timer-unit">
+                    <div class="unit-box"><span class="unit-number" id="hours-val">--</span></div>
+                    <span class="unit-label">घंटे</span>
+                  </div>
+                  <div class="timer-separator">:</div>
+                  <div class="timer-unit">
+                    <div class="unit-box"><span class="unit-number" id="minutes-val">--</span></div>
+                    <span class="unit-label">मिनट</span>
+                  </div>
+                  <div class="timer-separator">:</div>
+                  <div class="timer-unit">
+                    <div class="unit-box"><span class="unit-number" id="seconds-val">--</span></div>
+                    <span class="unit-label">सेकंड</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hero Quick Action Buttons -->
+              <div class="hero-action-buttons">
+                <a href="#event-sangeet" class="btn btn-gold scroll-to-events">
+                  <span>समारोह देखें</span>
+                  <span class="btn-arrow">↓</span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- STACK CARD 2: EVENT 1 - DAY 1 CEREMONIES (24-11-2026) -->
+      <section class="stack-section event-card-article" id="event-sangeet" data-card-index="1">
+        <div class="card-outer-frame">
+          <div class="card-inner-frame event-layout-split">
+            <div class="card-corner-ornament top-left"></div>
+            <div class="card-corner-ornament top-right"></div>
+            <div class="card-corner-ornament bottom-left"></div>
+            <div class="card-corner-ornament bottom-right"></div>
+
+            <!-- Left Visual Column -->
+            <div class="event-media-col">
+              <div class="event-visual-wrapper">
+                <img src="assets/sangeet.jpg" alt="सगाई एवं संगीत समारोह" class="event-art-img">
+                <div class="event-art-sparkles"></div>
+              </div>
+            </div>
+
+            <!-- Right Content Column -->
+            <div class="event-content-col">
+              <div class="event-badge">
+                <span class="badge-star">✦</span>
+                <span>दिन 1 • बारात प्रस्थान, साखरपुड़ा एवं संगीत</span>
+                <span class="badge-star">✦</span>
+              </div>
+
+              <h2 class="event-main-title">दिन 1 समारोह</h2>
+              <p class="event-tagline">पवित्र रीति-रिवाज, शाश्वत प्रतिज्ञा, संगीत की धुन और आनंदमय
+                उत्सव का शुभ दिन</p>
+
+              <!-- Exact Card Style Date Grid -->
+              <div class="card-style-date-block">
+                <div class="date-col month-col">नवंबर</div>
+                <div class="date-col-divider"></div>
+                <div class="date-col day-col">24</div>
+                <div class="date-col-divider"></div>
+                <div class="date-col time-col">2026</div>
+              </div>
+
+              <!-- Day 1 Ceremony Timeline -->
+              <div class="wedding-timeline-box">
+                <h4 class="timeline-heading">दिन 1 कार्यक्रम सूची</h4>
+
+
+
+                <div class="timeline-step">
+                  <span class="step-time">दोपहर 03:00 बजे</span>
+                  <div class="step-info">
+                    <strong>साखरपुड़ा विधि</strong>
+                    <p>पवित्र बंधन को सील करने वाली पारंपरिक सगाई रस्म</p>
+                  </div>
+                </div>
+
+                <div class="timeline-step">
+                  <span class="step-time">शाम 07:00 बजे</span>
+                  <div class="step-info">
+                    <strong>अंगूठी रस्म एवं संगीत</strong>
+                    <p>शाश्वत अंगूठियों का आदान-प्रदान, उसके बाद संगीत नृत्य उत्सव एवं डीजे नाइट</p>
+                  </div>
+                </div>
+
+                <div class="event-highlight-item" style="margin-top: 14px;">
+                  <span class="highlight-icon">✨</span>
+                  <div>
+                    <strong>थीम / पोशाक:</strong> इंडो-वेस्टर्न ग्लैमर एवं शाही उत्सवी शान।
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- STACK CARD 3: EVENT 2 - HALDI CEREMONY (25-11-2026 MORNING) -->
+      <section class="stack-section event-card-article" id="event-haldi" data-card-index="2">
+        <div class="card-outer-frame">
+          <div class="card-inner-frame event-layout-split reverse-split">
+            <div class="card-corner-ornament top-left"></div>
+            <div class="card-corner-ornament top-right"></div>
+            <div class="card-corner-ornament bottom-left"></div>
+            <div class="card-corner-ornament bottom-right"></div>
+
+            <!-- Visual Column -->
+            <div class="event-media-col">
+              <div class="event-visual-wrapper">
+                <img src="assets/haldi.jpg" alt="हल्दी रस्म समारोह" class="event-art-img">
+                <div class="event-art-sparkles yellow"></div>
+              </div>
+            </div>
+
+            <!-- Content Column -->
+            <div class="event-content-col">
+              <div class="event-badge badge-yellow">
+                <span class="badge-star">☀️</span>
+                <span>दिन 2 • शुभ प्रातःकालीन आशीर्वाद</span>
+                <span class="badge-star">☀️</span>
+              </div>
+
+              <h2 class="event-main-title title-yellow">हल्दी रस्म</h2>
+              <p class="event-tagline">धूप में नहाए, हल्दी से सजे, और सुगंधित गेंदे के फूलों से सराबोर
+              </p>
+
+              <!-- Exact Card Style Date Grid -->
+              <div class="card-style-date-block">
+                <div class="date-col month-col">नवंबर</div>
+                <div class="date-col-divider"></div>
+                <div class="date-col day-col">25</div>
+                <div class="date-col-divider"></div>
+                <div class="date-col time-col">सुबह 09:00</div>
+              </div>
+
+              <div class="event-description-box">
+                <div class="event-highlight-item">
+                  <span class="highlight-icon">🌼</span>
+                  <div>
+                    <strong>हल्दी एवं चंदन उबटन:</strong> पारंपरिक शुभ हल्दी पेस्ट की रस्म।
+                  </div>
+                </div>
+                <div class="event-highlight-item">
+                  <span class="highlight-icon">🌸</span>
+                  <div>
+                    <strong>फूलों की होली:</strong> ढोल की थाप पर गेंदे और गुलाब की पंखुड़ियों की बौछार।
+                  </div>
+                </div>
+                <div class="event-highlight-item">
+                  <span class="highlight-icon">💛</span>
+                  <div>
+                    <strong>थीम / पोशाक:</strong> धूप जैसी पीली एवं गेंदे के रंग की पारंपरिक पोशाक।
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- STACK CARD 4: EVENT 3 - THE GRAND SHADI (25-11-2026 EVENING) -->
+      <section class="stack-section event-card-article" id="event-shadi" data-card-index="3">
+        <div class="card-outer-frame">
+          <div class="card-inner-frame event-layout-split highlight-royal">
+            <div class="card-corner-ornament top-left"></div>
+            <div class="card-corner-ornament top-right"></div>
+            <div class="card-corner-ornament bottom-left"></div>
+            <div class="card-corner-ornament bottom-right"></div>
+
+            <!-- Visual Column -->
+            <div class="event-media-col">
+              <div class="event-visual-wrapper">
+                <img src="assets/shadi.jpg" alt="भव्य शादी विवाह मंडप फेरे" class="event-art-img">
+                <div class="event-art-sparkles royal"></div>
+              </div>
+            </div>
+
+            <!-- Content Column with Timeline -->
+            <div class="event-content-col">
+              <div class="event-badge badge-royal">
+                <span class="badge-star">👑</span>
+                <span>दिन 2 • पवित्र प्रतिज्ञा एवं शाही स्वागत</span>
+                <span class="badge-star">👑</span>
+              </div>
+
+              <h2 class="event-main-title title-royal">भव्य शादी (विवाह)</h2>
+              <p class="event-tagline">पवित्र अग्नि के चारों ओर सात पवित्र फेरे, दो आत्माओं को जन्म-जन्मांतर के लिए जोड़ते हुए</p>
+
+              <!-- Exact Card Style Date Grid -->
+              <div class="card-style-date-block">
+                <div class="date-col month-col">नवंबर</div>
+                <div class="date-col-divider"></div>
+                <div class="date-col day-col">25</div>
+                <div class="date-col-divider"></div>
+                <div class="date-col time-col">शाम 04:00</div>
+              </div>
+
+              <!-- Ceremony Schedule Timeline -->
+              <div class="wedding-timeline-box">
+                <h4 class="timeline-heading">शाम का कार्यक्रम सूची</h4>
+
+                <div class="timeline-step">
+                  <span class="step-time">शाम 04:00 बजे</span>
+                  <div class="step-info">
+                    <strong>स्वागत एवं सेहरा बंदी</strong>
+                    <p>पारंपरिक आरती एवं फूलमालाओं से अतिथियों का स्वागत</p>
+                  </div>
+                </div>
+
+                <div class="timeline-step">
+                  <span class="step-time">शाम 06:00 बजे</span>
+                  <div class="step-info">
+                    <strong>भव्य बारात शोभायात्रा</strong>
+                    <p>शाही बैंड और उत्सव के साथ दूल्हे की शाही शोभायात्रा</p>
+                  </div>
+                </div>
+
+                <div class="timeline-step">
+                  <span class="step-time">रात 08:00 बजे</span>
+                  <div class="step-info">
+                    <strong>जयमाला (वरमाला)</strong>
+                    <p>भव्य शाही मंच पर फूलमालाओं का आदान-प्रदान</p>
+                  </div>
+                </div>
+
+                <div class="timeline-step">
+                  <span class="step-time">रात 09:30 बजे</span>
+                  <div class="step-info">
+                    <strong>हस्त मिलाप एवं वैदिक फेरे</strong>
+                    <p>पवित्र हवन अग्नि के चारों ओर सात पवित्र परिक्रमा</p>
+                  </div>
+                </div>
+
+                <div class="timeline-step">
+                  <span class="step-time">रात 10:00 बजे से</span>
+                  <div class="step-info">
+                    <strong>शाही विवाह भोज एवं स्वागत समारोह</strong>
+                    <p>भव्य शाही रात्रिभोज और नवविवाहितों के लिए आशीर्वाद</p>
+                  </div>
+                </div>
+
+                <div class="event-highlight-item" style="margin-top: 14px;">
+                  <span class="highlight-icon">🌺</span>
+                  <div>
+                    <strong>थीम / पोशाक:</strong> पारंपरिक शाही जातीय, शेरवानी एवं भारी लहंगे / साड़ियां।
+                  </div>
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- STACK CARD 5: VENUE & CELEBRATION LOCATION -->
+      <section class="stack-section venue-location-section" id="venue-section" data-card-index="4">
+        <div class="card-outer-frame">
+          <div class="card-inner-frame venue-inner-card">
+            <div class="card-corner-ornament top-left"></div>
+            <div class="card-corner-ornament top-right"></div>
+            <div class="card-corner-ornament bottom-left"></div>
+            <div class="card-corner-ornament bottom-right"></div>
+
+            <div class="venue-header">
+              <span class="venue-pin">📍</span>
+              <h2 class="venue-title">स्थान एवं उत्सव का पता</h2>
+            </div>
+
+            <div class="venue-name-display">
+              श्री रामचंद्र निगम गार्डन
+            </div>
+            <p class="venue-address">
+              पीथमपुर, धार, मध्य प्रदेश
+            </p>
+
+            <div class="venue-buttons-group">
+              <a href="https://www.google.com/maps/search/?api=1&query=Shree+Ramchandra+Nigam+Garden+Pithampur+Dhar+MP"
+                target="_blank" rel="noopener" class="btn btn-gold map-link">
+                <span>🗺️ गूगल मैप्स में खोलें</span>
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- FOOTER WITH BLESSINGS -->
+    <footer class="invitation-footer">
+      <div class="gold-filigree-divider"></div>
+      <p class="footer-blessing">
+        "इस दिव्य मिलन पर शाश्वत प्रेम, सद्भाव और एकता का आशीर्वाद बना रहे।"
+      </p>
+      <div class="footer-families">
+        सादर शुभकामनाओं सहित<br>
+        <strong>दोनों परिवार एवं सम्बन्धी</strong>
+      </div>
+      <div class="footer-hashtag">#हिमांशुवेड्सश्वेता</div>
+      <p class="footer-note">आपके विशेष दिन के लिए प्यार से बनाया गया • 24 एवं 25 नवंबर 2026</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
